@@ -16,14 +16,10 @@ A PyTorch implementation of "TasNet: Time-domain Audio Separation Network for Re
 - If you need to convert wjs0 to wav format and generate mixture files, `cd tools; make`
 
 ## Usage
-If you already have mixture wsj0 data:
-1. `$ cd egs/wsj0`, modify wsj0 data path `data` to your path in the beginning of `run.sh`.
-2. `$ bash run.sh`, that's all!
+1、use mix_wav.py to prepare your mixed data with random snr.
+2、run preprocess.py to generate json file, then data is ok
+3、details abount train and evalute see run.sh
 
-If you just have origin wsj0 data (sphere format):
-1. `$ cd egs/wsj0`, modify three wsj0 data path to your path in the beginning of `run.sh`.
-2. Convert sphere format wsj0 to wav format and generate mixture. `Stage 0` part provides an example.
-3. `$ bash run.sh`, that's all!
 
 You can change hyper-parameter by `$ bash run.sh --parameter_name parameter_value`, egs, `$ bash run.sh --stage 3`. See parameter name in `egs/aishell/run.sh` before `. utils/parse_options.sh`.
 ### Workflow
